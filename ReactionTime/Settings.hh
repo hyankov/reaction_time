@@ -13,7 +13,7 @@
 // How many pings, for a median reading (> 1)
 // Lower count equals more probes per second.
 // Higher count equals less false positives.
-#define SONAR_PING_READY_STATE_MEDIAN_COUNT  10
+#define SONAR_PING_READY_STATE_MEDIAN_COUNT  5
 
 /*-------------
    Gameplay

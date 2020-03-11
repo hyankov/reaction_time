@@ -47,17 +47,14 @@ void _draw()
     {
         if (world.gameStartsAt)
         {
-            // TODO:
-            /*
             // Game is about to start
-            _printOnRow("Game starts in:", 1);
-            _printOnRow("     " + String(world.gameStartsInMs / 1000) + " ...", 3);
-            */
+            _printOnRow("Game starts in", 1);
+            _printOnRow("##### " + String((world.gameStartsAt - millis()) / 1000) + " #####", 3);
         }
         else
         {
             // Player needs to place hand over sensor
-            if (!world.hasBestResult())
+            if (!world.hasResults())
             {
                 // No best score - player never played
                 _printOnRow("Hold hand over", 1);

@@ -70,10 +70,10 @@ struct World
         }
     }
 
-    // Whether there is a best result recorded yet
-    bool hasBestResult()
+    // Whether there is a result recorded
+    bool hasResults()
     {
-        return _resultBestMs > 0;
+        return _resultBestMs || _resultLastMs || _lastResultIsBad;
     }
 
     // Updates the results.
@@ -82,7 +82,7 @@ struct World
     {
         _lastResultIsBad = false;
         _resultLastMs = newResultLastMs;
-        _resultBestMs = hasBestResult() ? min(_resultBestMs, _resultLastMs) : _resultLastMs;
+        _resultBestMs = _resultBestMs ? min(_resultBestMs, _resultLastMs) : _resultLastMs;
     }
 
     // Mark the last result as bad.
