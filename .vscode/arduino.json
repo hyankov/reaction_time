@@ -1,0 +1,7 @@
+{
+    "sketch": "ReactionTime/ReactionTime.ino",
+    "port": "COM6",
+    "board": "arduino:avr:uno",
+    "output": "../ArduinoOutput",
+    "programmer": "AVRISP mkII"
+}
