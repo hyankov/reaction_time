@@ -45,13 +45,11 @@ void _draw()
 
     if (world.gameState == GAME_STATE::NOT_STARTED)
     {
-        unsigned long now = millis();
-
-        if (world.gameStartsAt > now)
+        if (world.gameStartsAt > world.now)
         {
             // Game is about to start
             _printOnRow("Game starts in", 1);
-            int remSec = ((world.gameStartsAt - now) / 1000) + 1;
+            int remSec = ((world.gameStartsAt - world.now) / 1000) + 1;
             _printOnRow("##### " + String(remSec) + " #####", 2);
         }
         else

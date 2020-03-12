@@ -38,15 +38,13 @@ void setupSonar()
 
 void loopSonar()
 {
-    unsigned long now = millis();
-
     // Is it time to ping?
-    if (now >= _nextPingAt)
+    if (world.now >= _nextPingAt)
     {
         if (world.gameState == GAME_STATE::NOT_STARTED)
         {
             // When to ping again
-            _nextPingAt = now + (SONAR_PING_READY_STATE_MEDIAN_COUNT * _sonarTimeout);
+            _nextPingAt = world.now + (SONAR_PING_READY_STATE_MEDIAN_COUNT * _sonarTimeout);
 
             // With filtering
             world.isHandInFront = NewPing::convert_cm(_sonar.ping_median(SONAR_PING_READY_STATE_MEDIAN_COUNT)) != NO_ECHO;
@@ -54,7 +52,7 @@ void loopSonar()
         else
         {
             // When to ping again
-            _nextPingAt = now + _sonarTimeout;
+            _nextPingAt = world.now + _sonarTimeout;
 
             // Single ping
             world.isHandInFront = _sonar.ping_cm() != NO_ECHO;

@@ -12,6 +12,7 @@
 #include "Display.hh"   // Display handling
 #include "Lights.hh"    // Lights handling
 #include "Gameplay.hh"  // Gameplay handling
+#include "World.hh"     // The world
 
 // Setup and initialize
 void setup()
@@ -35,6 +36,7 @@ void setup()
 // The main loop, repeating over and over again
 void loop()
 {
+    world.now = millis();
     loopSonar();
     loopGameplay();
     loopDisplay();

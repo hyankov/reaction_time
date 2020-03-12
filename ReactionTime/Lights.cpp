@@ -45,8 +45,6 @@ void setupLights()
 
 void loopLights()
 {
-    unsigned long now = millis();
-
     if (world.gameState == GAME_STATE::NOT_STARTED)
     {
         // Game not started - no lights
@@ -56,7 +54,7 @@ void loopLights()
     else if (world.gameState == GAME_STATE::STARTED)
     {
         _isRandomColorSet = false;
-        if (!_lightsLastChangedAt || now >= _lightsLastChangedAt + LIGHTS_GAME_STARTED_CHANGE_EVERY_MS)
+        if (!_lightsLastChangedAt || world.now >= _lightsLastChangedAt + LIGHTS_GAME_STARTED_CHANGE_EVERY_MS)
         {
             // Time to change the lights
             // Ensure different colors for the two LEDs
@@ -65,7 +63,7 @@ void loopLights()
             while (randLed2 == randLed1) randLed2 = random(0, 3);
 
             _lightLeds(_rgbLed1[randLed1] | _rgbLed2[randLed2]);
-            _lightsLastChangedAt = now;
+            _lightsLastChangedAt = world.now;
         }
     }
     else if (world.gameState == GAME_STATE::SETOFF)

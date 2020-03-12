@@ -42,6 +42,9 @@ struct World
         Public methods
     ----------------------- */
 
+    // Common millis() for the loop
+    unsigned long now = millis();
+
     // The game state
     enum GAME_STATE gameState = GAME_STATE::NOT_STARTED;
 
