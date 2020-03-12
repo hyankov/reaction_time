@@ -13,7 +13,9 @@
 # Game Rules
 The player holds his hand over the sensor for a few seconds and that starts the game. Two RGB (Red, Green, Blue) LEDs start flashing in different colors. At a random time they will stop flashing and will remain lit, with the same color (e.g. both would become Blue). The player has to react as quick as possible and move his hand away from the sensor. The reaction time is recorded. The game is keeping track of the best reaction time so far. If the player moves their hand away from the sensor, before the signal is set off (i.e. before the LEDs stop flashing and remain the same color), that's considered a "bad" attempt.
 
-*TODO: Insert video here*
+**Video:**
+
+[<img src="https://img.youtube.com/vi/OYXGrj66SCE/0.jpg" alt="Video 1" title="Video 1" width="250" />](https://www.youtube.com/watch?v=OYXGrj66SCE)
 
 # Setup
 The setup consists of:
