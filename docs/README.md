@@ -31,6 +31,7 @@ The player holds his hand over the sensor for a few seconds and that starts the 
 
 ## Wiring
 [![Wiring](img/wiring.jpg)](wiring.fzz)
+
 *Click image to download `fzz` file*
 
 # Code
