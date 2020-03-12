@@ -17,7 +17,7 @@
 ----------------------- */
 
 // When was the signal set off
-unsigned long _setOffAt;
+unsigned long _setOffAt = 0;
 
 // Resets the game state to "waiting for hand"
 void _resetToWaitForHandState()
