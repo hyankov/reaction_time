@@ -49,7 +49,7 @@ struct World
     bool isHandInFront = false;
 
     // When does the game start (time)
-    unsigned int gameStartsAt = 0;
+    unsigned long gameStartsAt = 0;
 
     // Gets the best result, as string
     String getBestResult()

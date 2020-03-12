@@ -21,7 +21,7 @@
 
 // How long the player has to hold their hand in front
 // of the sonar, to start a game? In seconds.
-#define GAMEPLAY_HOLD_HAND_TO_START_S        5
+#define GAMEPLAY_HOLD_HAND_TO_START_S        3
 
 // The maximum distance of the hand from the sonar
 #define GAMEPLAY_HAND_MAX_DISTANCE_CM        10

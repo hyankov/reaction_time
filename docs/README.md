@@ -1,5 +1,6 @@
 - [Game Rules](#game-rules)
 - [Setup](#setup)
+  - [Components](#components)
   - [Wiring](#wiring)
 - [Code](#code)
   - [Main sketch](#main-sketch)
@@ -18,7 +19,7 @@ The player holds his hand over the sensor for a few seconds and that starts the 
 [<img src="https://img.youtube.com/vi/OYXGrj66SCE/0.jpg" alt="Video 1" title="Video 1" width="250" />](https://www.youtube.com/watch?v=OYXGrj66SCE)
 
 # Setup
-The setup consists of:
+## Components
 - Ultrasonic sensor HC-SR04
 - 220 ohm resistors
 - Two RGB LEDs
