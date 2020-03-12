@@ -24,14 +24,14 @@
 ----------------------- */
 
 byte const _rowHeight = 10;
-byte const _rowSpacing = 1;
+byte const _rowSpacing = 8;
 
 // For 0.91" (128 * 32)
 U8GLIB_SSD1306_128X32 _u8g(U8G_I2C_OPT_NONE);
 
 // Prints text on row
 // - text: the text to print
-// - row: the rown on which to print
+// - row: the rown on which to print (1 to 2)
 void _printOnRow(String text, byte row)
 {
     _u8g.setPrintPos(0, (row * _rowHeight) + _rowSpacing * (row - 1));
@@ -49,7 +49,7 @@ void _draw()
         {
             // Game is about to start
             _printOnRow("Game starts in", 1);
-            _printOnRow("##### " + String((world.gameStartsAt - millis()) / 1000) + " #####", 3);
+            _printOnRow("##### " + String((world.gameStartsAt - millis()) / 1000) + " #####", 2);
         }
         else
         {
@@ -58,8 +58,7 @@ void _draw()
             {
                 // No best score - player never played
                 _printOnRow("Hold hand over", 1);
-                _printOnRow("sensor to start", 2);
-                _printOnRow("the game!", 3);
+                _printOnRow("sensor to start!", 2);
             }
             else
             {
@@ -72,9 +71,8 @@ void _draw()
     else
     {
         // Game is on - show info how to play
-        _printOnRow("Remove hand when", 1);
-        _printOnRow("led colors are", 2);
-        _printOnRow("the same!", 3);
+        _printOnRow("Move hand when", 1);
+        _printOnRow("colors are same", 2);
     }
 }
 

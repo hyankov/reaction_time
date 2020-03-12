@@ -33,10 +33,10 @@ struct World
     bool _lastResultIsBad = false;
 
     // The best result
-    unsigned int _resultBestMs = 0;
+    unsigned long _resultBestMs = 0;
 
     // The last result
-    unsigned int _resultLastMs = 0;
+    unsigned long _resultLastMs = 0;
 
     /* -----------------------
         Public methods
@@ -78,7 +78,7 @@ struct World
 
     // Updates the results.
     // - newResultLastMs: the newest result.
-    void setLastResult(unsigned int newResultLastMs)
+    void setLastResult(unsigned long newResultLastMs)
     {
         _lastResultIsBad = false;
         _resultLastMs = newResultLastMs;
